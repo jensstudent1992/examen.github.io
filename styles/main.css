@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(243, 255, 224);
+    font-family:sans-serif;
+  }
+  
+h1 {
+    color: navy;
+    margin-left: 20px;
+    text-align: center;
+    font-size:10rem;
+  }
+h2{
+
+    color:brown;
+ }
+ /*voorbeeld da je meerdere zelfde criteria kunt geven*/
+ h3,h4,h5{
+    color:blue;
+ }
+/* Voorbeeld van een class*/
+ .classvoorbeeld{
+  color:aqua;
+ }
+/* voorbeeld van een id voor 1 wordt minder gebruikt*/
+ #idvoorbeeld{
+  color:green;
+ }
+ .inspringen{
+  margin-left:40px;
+ }
