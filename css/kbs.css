@@ -1,0 +1,607 @@
+*{margin:0px;padding:0px;}
+* {-webkit-font-smoothing: antialiased;}
+a img{border:none;outline:none;box-shadow:none;}
+input, textarea{outline:none;}
+.error{color:red;}
+.success{color:green;}
+div.error, div.success{margin-bottom:12px;}
+.hidden{visibility:hidden;height:0px;overflow:hidden;line-height:0px;}
+.clearfix::after{content:"";display:block;clear:both;height:0px;line-height:0px;}
+.w100{width:100%;}
+.clear{clear:both;width:100%;display:block;height:0px;line-height:0px;margin:0px;padding:0px;}
+div, section, footer, header, ul#list_express li .top{-moz-box-sizing:border-box; /* Firefox */-webkit-box-sizing:border-box;box-sizing:border-box;}
+.mt48{margin-top:48px;}
+.mb48{margin-bottom:48px;}
+.ta_right{text-align:right;}
+.cr_error.error{background:red;color:white;padding:12px;border-radius:6px;}
+.cr_error.success{background:green;color:white;padding:12px;border-radius:6px;}
+/*--------------COLORS--------------*/
+/* VERY LIGHT BLUE #aedff4 - LIGHT BLUE #000000 - STANDARD BLUE #000000 - MIDDLE BLUE #257b9f - DARK BLUE #15465b */
+/* GREY #979a9d - L GREY #d0d5da - LIGHT GREY #e5e9ed - VERY LIGHT GREY #eff2f5 - VERY VERY LIGHT GREY #f6f9fb */
+/* HIGH LIGHT #6997bf #fec506 */
+
+/*BACKGROUND COLORS-----------------------------------*/
+/*#cr_nav_top > div, #cv_bottom_nav #cr_pages ul li.active, #cv_bottom_nav #cr_pages ul li.active a, #cr_cv_nav .cv_nav_item.active, #cr_cv_sel_oplsrt .cv_nav_item.active, input[type=submit]:hover, #frm_forgotlogin input[type=submit]:hover, #cr_nav_top nav, .create_qr, #cr_cv_opleiding .ttl{background-color:#000000;}*/
+#cr_nav_top > div, #cv_bottom_nav #cr_pages ul li.active, #cv_bottom_nav #cr_pages ul li.active a, #cr_cv_nav .cv_nav_item.active, #cr_cv_sel_oplsrt .cv_nav_item.active, input[type=submit]:hover, #frm_forgotlogin input[type=submit]:hover, #cr_nav_top nav, .create_qr, #cr_cv_opleiding .ttl{background-color:#6997bf;}
+
+.cv_btn_inschrijven{background:grey;}
+.cv_btn_inschrijven:hover{background:#6997bf;}
+footer{background:white;}
+#cr_nav_top nav ul li, #cr_nav_top_blinc ul li{background:#e5e9ed;color:#000000;}
+#cr_nav_top nav ul li:hover, #cr_nav_top nav ul li.active, #cr_nav_top_blinc nav ul li:hover, #cr_nav_top_blinc nav ul li.active{background:#d0d5da;}
+input[type=text], textarea, input[type=password]{background:white;border:1px solid #eff2f5;}
+input[type=submit], #cr_search{background:#d0d5da;transition:all 0.2s ease-out;}
+#frm_forgotlogin input[type=submit]{background:#000000;transition:all 0.2s ease-out;}
+#frm_login{border-bottom:1px solid #eff2f5;}
+input[type=text].focus, textarea.focus{border:1px solid #000000;}
+input[type=text]:focus, textarea:focus{border:1px solid #000000;color:#000000;}
+#frm_search button, #cr_cv_nav .btn_down, #cr_cv_sel_oplsrt .btn_down{background:#979a9d;}
+#cv_bottom_nav #cr_pages ul li a{border-color:#e5e9ed;}
+#cv_bottom_nav #cr_pages ul li.active a{border-color:#6997bf;}
+#cr_cv_kalenderlist table th, #cr_cv_onderdelenlist table th{border-color:#e5e9ed;border-right-color:#e5e9ed;background:#6997bf;color:#ffffff;}
+#cr_cv_kalenderlist table table th{border-color:#e5e9ed;border-right-color:#e5e9ed;background:#eff2f5;}
+#cr_cv_kalenderlist table td, #cr_cv_kalenderlist table tr.data, #cr_cv_onderdelenlist table td{border-color:#e5e9ed;}
+#cr_cv_kalenderlist table th.last, #cr_cv_kalenderlist table th.empty{border-color:#e5e9ed;border-right-color:#e5e9ed;background:#6997bf;color:#ffffff;}
+#cr_cv_kalenderlist table th.empty{border-right-color:#eff2f5;}
+#cr_cv_kalenderlist table tr.even, #cr_cv_kalenderlist table tr div.even, #cr_cv_onderdelenlist table tr div.even{background:#eff2f5;}
+/*#cr_cv_kalenderlist table tr.even td.cv_btn_data{border-right-color:#eff2f5;}*/
+#cr_cv_kalenderlist table tr.odd, #cr_cv_kalenderlist table tr div.odd, #cr_cv_onderdelenlist table tr div.odd, #cr_cv_onderdelenlist table tr.odd, #cr_cv_onderdelenlist table tr.even{background:#f6f9fb;}
+/*#cr_cv_kalenderlist table tr.odd td.cv_btn_data{border-right-color:#f6f9fb;}*/
+#cr_cv_kalenderlist table tr .inner .ttl{border-color:#d0d5da;}
+#cr_cv_kalenderlist table tr td:nth-child(1){font-weight:bold;}
+#cr_cv_kalenderlist table tr td:nth-child(2)::before{content:'Start: ';display:'inline-block';}
+#cr_cv_kalenderlist table tr td:nth-child(3)::before{content:'Locatie: ';display:'inline-block';}
+#cr_cv_kalenderlist table tr td:nth-child(4) br{display:none;}
+#cr_cv_kalenderlist table tr td:nth-child(4) span{display:block;}
+#cr_cv_kalenderlist table tr td:nth-child(4) span:nth-of-type(1)::before{content:'Kostprijs: ';display:'inline-block';}
+#cr_cv_kalenderlist table tr td:nth-child(4) span:nth-of-type(2)::before{content:'Details: ';display:'inline-block';}
+#cr_cv_kalenderlist table tr td:nth-child(5)::before{content:'Beschikbare plaatsen: ';display:'inline-block';}
+#cr_cv_kalenderlist table tr td:nth-child(5), #cr_cv_kalenderlist table tr td:nth-child(6){margin-bottom:12px;}
+#cr_cv_kalenderlist table tr td > div{display:inline-block;}
+#cr_cv_nav .cv_nav_item, #cr_cv_sel_oplsrt .cv_nav_item{background-color:#e5e9ed;}
+#cr_cv_nav .cv_nav_item:hover, #cr_cv_sel_oplsrt .cv_nav_item:hover{background-color:#d0d5da;}
+#cr_cv_form input[type=submit]:hover, #frm_gdpr input[type=submit], .cr_cv_wachtlijst input[type=submit]:hover{background-color:#9fc046;}
+.deelnemer_item, .btn_add_deelnemer{background:#eff2f5;}
+select{border:1px solid #e5e9ed;}
+#cr_cv_form input[type=submit], .cr_cv_wachtlijst input[type=submit], #frm_gdpr input[type=submit]{background-color:#9fc046;}
+.cr_btn_cancel input, #btn_wis_handtekening{background:#eff2f5;}
+#cr_cv_form input[type=text], #cr_cv_form select, #cr_cv_wachtlijst input[type=text], #frm_gdpr input[type=text], #frm_gdpr select, #canvasSimpleDiv{border-color:#aaa;}
+input[type=text].error, input[type=password].error, textarea.error, #cr_cv_form input[type=text].input_error, #cr_cv_form input[type=password].input_error, #cr_cv_form textarea.input_error, #cr_cv_form select.input_error, #canvasSimpleDiv.input_error{border:1px solid red;}
+#cr_cookiesign, #frm_inschrijving button.next{background:#6997bf;}
+#btn_cookie_ok{background:#000000;}
+div.customselect, .filterbutton, .btn_back, .cr_list_details > div > span, #cr_cv_inschrijving form .input_group{background-color:#f6f9fb;}
+#cr_inschrijving_left .ttl{background:#9fc046;}
+div.customselect span{background-color:#e6e9eb;border-bottom:2px solid #fff;}
+div.customselect span:last-child{border-bottom:0px;}
+/*.cv_btn_data a, .cv_btn_qr{background:#EF773E;}*/
+/*.cv_btn_data a, .cv_btn_qr, a.create_qr{margin-bottom:12px;}*/
+/*TEXT COLORS-----------------------------------------*/
+body, p, a{color:#575756;}
+h1{color:#222;}
+.info{color:#aaa;}
+#cr_nav_top nav ul li a, #cr_cv_nav .btn_down, #cr_cv_sel_oplsrt .btn_down{color:#000000;}
+footer, footer a, footer p, input[type=submit]:hover, #frm_forgotlogin input[type=submit], #cv_bottom_nav #cr_pages ul li.active, #cv_bottom_nav #cr_pages ul li.active a, .cv_btn_inschrijven, #cr_cv_nav .cv_nav_item.active, #cr_cv_sel_oplsrt .cv_nav_item.active, #cr_cookiesign p, #cr_cookiesign a, #cr_cookiesign, #btn_cookie_ok, .cv_btn_qr, .create_qr{color:#5A666f;}
+#frm_inschrijving button.next{background:grey;color:white;}
+#frm_inschrijving button.next:hover{background:#6997bf;color:white;}
+#cr_cookiesign p, #cr_cookiesign{color:black;}
+input[type=submit], #btn_wis_handtekening{color:#666;}
+#cv_bottom_nav #cr_pages ul li a, #cv_bottom_nav #cr_info_pages{color:#979a9d;}
+#cr_cv_kalenderlist table tr .inner .ttl, #cr_cv_kalenderlist table table td, #cr_cv_nav .cv_nav_item, #cr_cv_sel_oplsrt .cv_nav_item, #cr_cv_kalenderlist table table th{color:#8f8f8f;}
+input[type=text].input_error, input[type=password].input_error, textarea.input_error, select.input_error{color:red;}
+/*----------------------------------*/
+/*				STICKY FOOTER		*/
+/*----------------------------------*/
+html{scroll-behavior: smooth;}
+html, body {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-size:16px;
+	-moz-osx-font-smoothing: grayscale;
+	padding:0px;
+	margin:0px;
+	width:100%;
+}
+.js body{display:none;}
+#container{margin:0 0 -220px 0;width:100%;min-height:100%;position:relative;overflow:hidden;padding:0px;}
+#push, footer{height:220px;}
+footer{padding:36px 0;width:100%;overflow:hidden;box-sizing:border-box;}
+footer > div{text-align:center;padding:0 24px;margin:0 0 24px 0;}
+footer > div a img{height:68px;}
+
+/*----------------------------------*/
+/*				LAYOUT CONTAINERS	*/
+/*----------------------------------*/
+.cntnt{padding:0px 24px;position:relative;}
+.shadowbox{padding:36px;background:#fff;-moz-box-shadow:6px 12px 24px 0px rgba(0,0,0,0.5);-webkit-box-shadow: 6px 12px 24px 0px rgba(0,0,0,0.5);box-shadow:6px 12px 24px 0px rgba(0,0,0,0.5);}
+#cr_search, #cr_search_comp{padding:12px;margin-bottom:6px;}
+.filterbutton{border-radius:0px;padding:12px;display:block;margin-bottom:2px;cursor:pointer;}
+.filterbutton{position:relative;font-size:14px;}
+.filterbutton .ttl{width:calc( 100% - 34px );font-weight:bold;}
+.filterbutton .icon{width:16px;position:absolute;right:18px;height:16px;top:14px;background-image:url('../img/icon_arrowdown.png');background-repeat:no-repeat;background-position:center center;background-size:16px 16px;}
+.filterbutton .icon.close{background-image:url('../img/icon_close2.png');background-repeat:no-repeat;background-position:center center;background-size:16px 16px;}
+.filterbutton .customselect .parent{position:relative;}
+.filterbutton .customselect{position:absolute;top:0px;left:0px;width:100%;cursor:default;border-radius:6px;height:0px;overflow:hidden;z-index:1000;}
+.filterbutton .customselect span{display:block;margin-bottom:1px;cursor:pointer;padding:12px;font-size:14px;font-weight:bold;}
+.btn_back{display:block;text-decoration:none;padding:12px 12px 12px 28px;background-image:url('../img/icon_back.png');background-repeat:no-repeat;background-position:12px center;background-size:16px 16px;text-align:center;font-weight:bold;}
+#cr_home > div:first-child{width:calc( 100% - 412px );margin-left:48px;}
+
+#cr_cv_kalenderlist, #cr_cv_onderdelenlist{position:relative;margin-bottom:24px;}
+#cr_cv_kalenderlist table, #cr_cv_onderdelenlist table{width:100%;}
+#cr_cv_kalenderlist table th, #cr_cv_onderdelenlist table th{border-width:1px;border-style:solid;padding:12px;}
+#cr_cv_kalenderlist table th:first-of-type, #cr_cv_onderdelenlist table th{text-align:left;}
+#cr_cv_kalenderlist table th{display:none;}
+#cr_cv_kalenderlist table th:first-of-type{display:table-cell;width:100%;}
+#cr_cv_kalenderlist table td{width:100%;display:block;padding:0 12px;box-sizing:border-box;}
+#cr_cv_kalenderlist table td:first-of-type{padding:12px;font-weight:400;}
+/*#cr_cv_kalenderlist table td.cv_btn_data, #cr_cv_kalenderlist table td.cv_btn_qr{padding:12px 12px 0px 12px;}*/
+#cr_cv_kalenderlist table table td:first-of-type{padding:12px 0px 12px 0px;font-weight:400;}
+/*#cr_cv_kalenderlist table td.last{padding:0 12px 12px 12px;}*/
+#cr_cv_kalenderlist table td.td_datum::before{content:'Startdatum: ';display:inline-block;margin-right:6px;}
+#cr_cv_kalenderlist table td.td_locatie::before{content:'Locatie: ';display:inline-block;margin-right:6px;}
+#cr_cv_kalenderlist table td.td_start::before{content:'Start: ';display:inline-block;margin-right:6px;}
+#cr_cv_kalenderlist table td.td_starteinde::before{content:'Start - Einde: ';display:inline-block;margin-right:6px;}
+#cr_cv_kalenderlist table td.td_einde::before{content:'Einde: ';display:inline-block;margin-right:6px;}
+#cr_cv_kalenderlist table td.td_code::before{content:'Code: ';display:inline-block;margin-right:6px;}
+#cr_cv_kalenderlist table div.inner{height:0px;overflow:hidden;position:relative;}
+#cr_cv_kalenderlist table div.inner .inhoud{padding:12px 24px;position:absolute;width:100%;box-sizing:border-box;}
+#cr_cv_kalenderlist table div.inner .inhoud table{margin:0px;padding:0px;position:relative;box-sizing:border-box;border-collapse:collapse;}
+#cr_cv_kalenderlist table tr div.inhoud .ttl{border-bottom-width:1px;border-bottom-style:dotted;padding:0px 0;margin:0px;box-sizing:border-box;text-transform:uppercase;}
+#cr_cv_kalenderlist table table td{font-weight:400;padding:0px;margin-bottom:0px;}
+
+#cr_cv_onderdelenlist table th{text-align:center;}
+#cr_cv_onderdelenlist table td{padding:12px;text-align:center;border-left-width:1px;border-right-width:1px;border-bottom-width:1px;border-top-width:0px;border-style:solid;}
+#cr_cv_onderdelenlist table tr td:first-child{text-align:left;border-left-width:0px;border-right-width:1px;border-bottom-width:1px;border-top-width:0px;border-style:solid;}
+
+#cr_cv_opleiding .ttl{position:relative;}
+#cr_cv_opleiding .ttl > div{float:left;}
+#cr_cv_opleiding .ttl > div:first-child{width:calc( 100% - 180px );padding:6px 0;}
+#cr_cv_opleiding .ttl > div:last-child{width:180px;text-align:right;}
+#cr_cv_opleiding .ttl::after{content:'';display:block;width:100%;height:0px;line-height:0px;clear:both;}
+
+
+
+.rotated {
+    -webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
+    -moz-transform: rotate(90deg);  /* Firefox 3.5-15 */
+    -ms-transform: rotate(90deg);  /* IE 9 */
+    -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
+    transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+}
+#cr_cntnt{position:relative;}
+#cr_cookiesign{opacity:0;position:fixed;bottom:0px;width:100%;z-index:200000;}
+#cr_cookiesign p{padding: 24px 24px 0px 24px;}
+#btn_cookie_ok{display:inline-block;padding:4px 18px;text-decoration:none;border-radius:2px;}
+
+#cr_qrcode{width:96%;height:96%;position:fixed;background:rgba(255,255,255, 0.9);z-index:10000;top:2%;left:2%;}
+#cr_qrcode .btn_close{position:absolute;top:12px;right:12px;cursor:pointer;background:url('/img/icon_close.png') no-repeat center right;background-size:18px 18px;z-index:100000;height:18px;width:auto;padding-right:22px;text-decoration:underline;}
+#cr_qrcode .inner{width:60%;margin:auto;position:relative;}
+#cr_qrcode .inner svg{width:100%;height:100%;}
+#cr_qrcode .cntnt_url{width:100%;text-align:center;font-weight:bold;font-size:1.5em;padding:24px 24px 0px 24px;color:black;}
+
+#canvasSimpleDiv{width:490px;height:220px;border-width:1px; border-style:solid;cursor:wait;position:relative;}
+#canvasSimpleDiv canvas{cursor:pointer;}
+#cr_cv_opleiding .ttl, #cr_inschrijving_left .ttl{padding:12px; color:#ffffff;font-weight:bold;margin-bottom:24px;}
+.cr_list_details{margin-bottom:24px;}
+.cr_list_details > div{position:relative;margin-bottom:2px;}
+.cr_list_details > div > label{float:left;display:block;width:240px;padding:12px;box-sizing:border-box;color:black;font-weight:bold;margin-right:24px;font-size:1em;}
+.cr_list_details > div > span{float:left;display:block;width:calc( 100% - 264px);padding:12px; box-sizing:border-box;}
+#cr_inschrijving_left .ttl{display:block;text-decoration:none;padding:12px 12px 12px 12px;text-align:center;font-weight:bold;}
+#cr_cv_inschrijving > div.ttl{padding:6px 0px;margin-bottom:0px;}
+#cr_cv_inschrijving > div.ttl h1{margin-bottom:0px;}
+#cr_cv_inschrijving form{margin:0px;}
+#cr_cv_inschrijving form .input_group{margin-bottom:3px;position:relative;}
+#cr_cv_inschrijving form legend{display:block;border-bottom:1px solid #999;margin-bottom:12px;padding:6px 0px;}
+#cr_cv_inschrijving form .input_group{padding:18px;}
+#cr_cv_inschrijving form .button_nav{padding:18px;margin-bottom:12px;}
+#cr_cv_inschrijving form .cbo_group{padding:0px 0px;margin:0 6px 12px 0px;}
+#cr_cv_inschrijving form .input_group div:last-child{margin-bottom:0px;}
+#cr_cv_inschrijving form .cbo_group > div{position:relative;}
+#cr_cv_inschrijving form .cbo_group > div label, #cr_cv_inschrijving form .cbo_group > div input{display:inline-block;}
+#cr_cv_inschrijving form .cbo_group > div input{margin-right:6px;}
+#cr_cv_inschrijving form .input_text{padding:0 6px;}
+#cr_cv_inschrijving form > div:first-child{display:block;}
+#cr_cv_inschrijving form > div{display:none;}
+#cr_cv_inschrijving form .input_group > label{padding-left:6px;}
+#frm_inschrijving .input_button{padding:12px 0px;}
+#cr_cv_inschrijving .input_group .cr_error{margin:0 6px;}
+#frm_inschrijving label, #frm_inschrijving{color:#212529;}
+/*-------------------------------------*/
+/*				FLEX                   */
+/*-------------------------------------*/
+#cr_navmobile ul, .cr_flex{
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox; 
+	display: -webkit-flex; 
+	display: flex;
+}
+.flex_parent_square, .flex_image, .cr_flex{
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	flex:1 0 auto;
+	-ms-flex-align: start;
+	-webkit-align-items: flex-start;
+	-webkit-box-align: start;
+	align-items: flex-start;
+	position:relative;
+}
+#cr_partners .partner{
+	width:94%;
+	position:relative;
+	-moz-box-sizing:border-box; /* Firefox */-webkit-box-sizing:border-box;box-sizing:border-box;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	margin:0 3% 48px 3%;
+}
+.flex_parent_square .square img{width:100%;}
+.flexbox_center, #list_referenties li div a, #cr_roulette .list ul li div a{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	text-align:center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+
+/*----------------------------------*/
+/*				STYLE FORM      	*/
+/*----------------------------------*/
+form{display:block;position:relative;margin-bottom:24px;padding-bottom:24px;padding-top:24Px;}
+#frm_search{padding-bottom:0px;margin-bottom:0px;}
+label.block{display:block;margin-bottom:6px;}
+label.uc{text-transform:uppercase;}
+label{font-size:0.875em;}
+input[type=text], textarea, input[type=password]{padding:6px;width:100%;box-sizing: border-box;margin-bottom:12px;}
+input[type=submit], input[type=button]{border:0px;padding:12px 48px;transition:all 0.2s ease-out;width:auto;box-sizing:border-box;}
+input[type=submit].block{display:block;}
+div.cr_input{margin-bottom:12px;}
+form .last{margin-bottom:24px;}
+input[name=btn_cancel]{opacity:0.7;transition:all 0.2s ease-out;}
+input[name=btn_cancel]:hover{opacity:1;}
+#frm_search input[type=text]{display:inline-block;width:calc( 100% - 40px );margin-bottom:0px;border:0px;line-height:24px;}
+#frm_search button{width:36px;height:36px;border:0px;padding:0px;opacity:0.5;box-sizing:border-box;position:relative;position:absolute;right:0px;top:0px;}
+#frm_search button img{height:16px;display:block;margin:10px;}
+
+
+.cr_cv_form, .cr_cv_wachtlijst{margin-bottom:24px;background:#f1f1f1;height:0px;overflow:hidden;padding:0px;box-sizing:border-box;position:relative;}
+#cr_cv_form form, .cr_cv_wachtlijst form{display:block;margin:0px; }
+#frm_gdpr{display:block;margin:0px;width:100%;}
+#cr_cv_form .cntnt_form, .cr_cv_wachtlijst .cntnt_form, #cr_frm_gdpr .cntnt_form{padding:0px;}
+#cr_cv_form label, .cr_cv_wachtlijst label, #frm_gdpr label{display:block;}
+#cr_cv_form label.label_inline, .cr_cv_wachtlijst label.label_inline, #frm_gdpr label.label_inline{display:inline;margin-left:3px;}
+#cr_cv_form label.big, .cr_cv_wachtlijst label.big, #frm_gdpr label.big{font-weight:700;margin-bottom:3px;}
+#cr_cv_form label.small, .cr_cv_wachtlijst label.small, #frm_gdpr label.small{font-size:0.875em;margin-bottom:0px;}
+#cr_cv_form p{font-size:0.875em;}
+#cr_cv_kalenderlist .cr_cv_form input[type=text], #cr_cv_form select, .cr_cv_wachtlijst input[type=text], #frm_gdpr input[type=text], #frm_gdpr select{padding:6px 4px;background:white;border-width:1px; border-style:solid;box-sizing:border-box;width:100%;margin-bottom:12px;}
+.cr_cv_wachtlijst textarea{padding:6px 4px;background:white;border:1px solid #65c4af;box-sizing:border-box;width:100%;resize:vertical;font-size:0.875em;}
+.cr_cv_wachtlijst input[type=text]{border:1px solid #65c4af;font-size:0.875em;}
+#cr_cv_kalenderlist .cr_cv_form input[type=text].input_error, #cr_cv_kalenderlist .cr_cv_form select.input_error, #cr_cv_kalenderlist .cr_cv_wachtlijst input[type=text].input_error, #cr_cv_kalenderlist .cr_cv_wachtlijst textarea.input_error, #frm_gdpr input[type=text].input_error, #frm_inschrijving input.input_error, #frm_inschrijving textarea.input_error{background:red;border:1px solid red;color:white;}
+.cbo_group.input_error, .cbo_group.input_error a{background:red;color:white;}
+
+#cr_cv_form input.small, .cr_cv_wachtlijst input.small, #frm_gdpr input.small{width:120px;}
+#cr_cv_form .cr_input_inline, #cr_cv_form .cr_input, #cr_cv_form .cr_input_full, .cr_cv_wachtlijst .cr_input_inline, .cr_cv_wachtlijst .cr_input, .cr_cv_wachtlijst .cr_input_full, .cr_cv_wachtlijst .cr_input_inline, #frm_gdpr .cr_input_inline, #frm_gdpr .cr_input, #frm_gdpr .cr_input_full{position:relative;margin-bottom:9px;}
+#cr_cv_form .cr_input_inline::after, .cr_cv_wachtlijst .cr_input_inline::after, #frm_gdpr .cr_input_inline::after{content:'';display:block;height:0px;overflow:hidden;clear:both;}
+#cr_cv_form .cr_input_inline div, .cr_cv_wachtlijst .cr_input_inline div, #frm_gdpr .cr_input_inline div{width:100%;box-sizing:border-box;display:block;position:relative;overflow:hidden;}
+#cr_cv_form .cr_input_inline div:nth-of-type(1), #cr_cv_form .cr_input_inline div:nth-child(4), #cr_cv_form .cr_input_inline div:nth-child(6), .cr_cv_wachtlijst .cr_input_inline div:nth-child(2), #frm_gdpr .cr_input_inline div:nth-child(2){margin-right:1%;}
+#cr_cv_form .cr_input_inline div:nth-of-type(1){width:100px;float:left;}
+#cr_cv_form .cr_input_inline div:nth-of-type(2){width:calc(99% - 102px);}
+#cr_cv_form .cr_input, .cr_cv_wachtlijst .cr_input, #frm_gdpr .cr_input{width:100%;box-sizing:border-box;display:block;position:relative;overflow:hidden;}
+.cr_cv_wachtlijst .cr_input{width:100%;box-sizing:border-box;}
+#cr_cv_form input[type=submit], .cr_cv_wachtlijst input[type=submit], #frm_gdpr input[type=submit]{border:0px;color:#5a666f;text-transform:uppercase;cursor:pointer;transition:all 0.2s ease-out;font-size:1em;}
+.cr_cv_wachtlijst .cr_btn_send{margin-top:24px;text-align:center;}
+.cr_cv_wachtlijst input[type=submit]{background-color:#65c4af;display:block;}
+#cr_cv_form .cr_input_hidden, #frm_gdpr .cr_input_hidden{height:0px; overflow:hidden;}
+
+#cr_cv_form .cr_formerror, .cr_cv_wachtlijst .cr_formerror, #frm_gdpr .cr_formerror{color:red;position:relative;font-style:italic;font-weight:700;}
+.cr_cv_wachtlijst .cr_formerror{text-align:left;}
+#cr_cv_form .cr_formerror div, .cr_cv_wachtlijst .cr_formerror div, #frm_gdpr .cr_formerror div{margin:24px 0;}
+.cr_cv_wachtlijst{margin-bottom:24px;height:0px;overflow:hidden;padding:0px;box-sizing:border-box;position:relative;font-size:1em;}
+
+#cr_cv_form .cv_part{margin-bottom:24px;}
+#cr_cv_form form select.small{width:54px;display:inline-block;margin-right:0px;margin-bottom:12px;padding-left:2px;padding-right:2px;text-align:center;}
+.deelnemer_item{padding:24px;margin-bottom:6px;position:relative;}
+.btn_add_deelnemer{position:relative;color:#666666;cursor:pointer;padding:9px 12px;width:auto;display:inline-block;margin-top:12px;}
+.btn_add_deelnemer img{height:18px;display:inline-block;margin-right:6px;}
+label.ttl{font-weight:700;display:block;margin-bottom:6px;}
+.cr_btn_send, .cr_btn_cancel{display:inline-block;margin-right:6px;}
+.btn_close_deelnemer{position:absolute;right:12px;cursor:pointer;width:18px;height:18px;background:url('/img/icon_close.png') no-repeat center center;background-size:cover;z-index:100000;}
+#cr_form div.shadowbox{width:440px;float:right;}
+#cr_form div.text{padding:36px 48px;width:calc( 100% - 440px );}
+#cr_form::after{content:'';display:block;float:none;clear:both;height:0px;line-height:0px;}
+
+#frm_inschrijving button{padding:6px 12px; border:0px;line-height:24px;border-radius:6px;background:#ccc;}
+#frm_inschrijving button[name="btn_add"]{display:block;width:100%;}
+#cr_list_deelnemers .deelnemer{position:relative;}
+#cr_list_deelnemers .deelnemer .btn_close{cursor:pointer;position:absolute;right:18px;top:22px;width:24px;height:24px;background-image:url('../img/icon_close2.png');background-repeat:no-repeat;background-position:center center;background-size:24px auto;opacity:0.4;}
+#cr_list_deelnemers .deelnemer .btn_close:hover{opacity:1;}
+#cr_list_deelnemers .deelnemer:first-child .btn_close{display:none;}
+/*----------------------------------------------------------*/
+/*                   NAVIGATION                             */
+/*----------------------------------------------------------*/
+
+#cr_navmobile{padding:24px;z-index:101;height:auto;position:relative;}
+#cr_navmobile>a{display:inline-block;height:84px;position:relative;}
+#cr_navmobile>a img{height:100%;}
+#cr_navmobile ul li a{padding:3px 0;display:inline-block;text-transform:uppercase;text-decoration:none;}
+#cr_navmobile ul li a.active{font-weight:600;}
+#cr_navmobile ul {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: wrap;flex-wrap: wrap;-webkit-box-align: center;-ms-flex-align: center;justify-content:center;align-items: center;list-style-type: none;width: 100%;height: 100%;padding: 0;overflow: auto;z-index: 1100;top: 0;left: -100%;opacity: 0;margin:0;position:fixed;background-color:#283d3b;}
+#cr_navmobile ul.open{opacity:1;left:0;transition: opacity 0.3s ease;}
+#cr_navmobile ul li{opacity:0;transition:all 0.3s ease;text-align:left;margin:0 0 12px 0;}
+#cr_navmobile ul.open li{text-align:center;opacity:1;}
+#cr_navmobile ul li:nth-child(2){transition-delay:0.15s;}
+#cr_navmobile ul li:nth-child(3){transition-delay:0.3s;}
+#cr_navmobile ul li:nth-child(4){transition-delay:0.45s;}
+#cr_navmobile ul li:nth-child(5){transition-delay:0.6s;}
+#cr_navmain, #cr_navleft, #cr_navright, #nav_handler, #slidenav{display:none;}
+#cr_subnav{margin:0 0 48px 0;}
+#cr_subnav br{display:none;}
+#cr_subnav span{display:inline-block;color:#e7d5c2;margin:0 12px 0 12px;}
+
+#cr_nav_top > div{position:relative;padding:36px 0;text-align:center;}
+#cr_nav_top > div a{text-decoration:none;cursor:pointer;}
+#cr_nav_top > div img{height:48px;}
+#cr_nav_top nav ul{position:relative;width:100%;list-style-type:none;}
+#cr_nav_top nav ul li{margin:0px;padding:0px;display:inline-block;text-align:center;width:calc( 25% - 1px);box-sizing:border-box;border-right-width:1px;border-right-style:solid;border-right-color:white;margin-bottom:1px;position:relative;transition:all 0.2s ease-out;}
+#cr_nav_top nav ul li:nth-of-type(4){border-right-width:0px;width:25%;}
+#cr_nav_top nav ul ::after{content:'';height:0px;line-height:0px;clear:both;display:block;}
+#cr_nav_top nav ul li a{display:block;padding:12px;font-size:12px;line-height:16px;text-decoration:none;font-weight:700;opacity:0.3;transition:all 0.2s ease-out;margin:0px;}
+#cr_nav_top nav ul li a:hover, #cr_nav_top ul li.active a{opacity:0.5;}
+#cr_nav_top nav ul li a span, #cr_nav_top nav ul li a img{display:block;}
+#cr_nav_top nav ul li a img{width:24px;margin:0 auto 3px auto;}
+
+/*-----------CUSTOM TRANSFORM--------------------*/
+#cr_nav_top_blinc nav{position:relative;float:right;width:240px;margin:12px 0 0 0;}
+#cr_nav_top_blinc nav ul{position:relative;width:100%;list-style-type:none;}
+#cr_nav_top_blinc nav ul li{margin:0px;padding:0px;display:inline-block;text-align:center;width:calc( 25% - 1px);box-sizing:border-box;margin-bottom:1px;position:relative;transition:all 0.2s ease-out;}
+
+#cr_nav_top_blinc nav ul ::after{content:'';height:0px;line-height:0px;clear:both;display:block;}
+#cr_nav_top_blinc nav ul li a{display:block;padding:12px 3px;font-size:10px;line-height:1.375;text-decoration:none;font-weight:700;opacity:0.3;transition:all 0.2s ease-out;margin:0px;}
+#cr_nav_top_blinc nav ul li a:hover, #cr_nav_top ul li.active a{opacity:0.5;}
+#cr_nav_top_blinc nav ul li a span, #cr_nav_top nav ul li a img{display:block;}
+#cr_nav_top_blinc nav ul li a img{width:24px;margin:0 auto 3px auto;}
+
+#cv_bottom_nav{margin-bottom:24px;}
+#cv_bottom_nav #cr_pages ul li{display:inline;box-sizing:border-box;}
+#cv_bottom_nav #cr_pages ul li:first-of-type a{border-top-left-radius:4px;border-bottom-left-radius:4px;}
+#cv_bottom_nav #cr_pages ul li:last-of-type a{border-top-right-radius:4px;border-bottom-right-radius:4px;}
+#cv_bottom_nav #cr_pages ul li a{padding:6px 12px;border-width:1px;border-style:solid;position:relative;text-decoration:none;float:left;margin-left:-1px;display:block;}
+#cv_bottom_nav #cr_pages ul li.active a{border-width:1px;border-style:solid;}
+
+#cr_oplsoortbtns{width:calc( 100% - 48px );margin:12px 24px;position:relative;height:auto;box-sizing:content-box;}
+#cr_cv_nav, #cr_cv_sel_oplsrt{position:relative;padding:0px;height:0px;overflow:hidden;}
+#cr_cv_nav{height:36px;padding:0px;}
+#cr_cv_nav .cv_nav_item, #cr_cv_sel_oplsrt .cv_nav_item{display:block;position:absolute;top:0px;width:calc( 100% - 38px );margin-bottom:1px;margin-right:1px;padding:8px 12px;transition:background 0.2s ease-out;font-weight:700;box-sizing:border-box;text-decoration:none;opacity:1;}
+#cr_cv_nav .cv_nav_item div, #cr_cv_sel_oplsrt .cv_nav_item div{line-height:20px;height:20px;overflow:hidden;display:block;padding:0px;cursor:pointer;}
+#cr_cv_nav .cr_btns div.cv_nav_item.active{z-index:+3;}
+#cr_cv_sel_oplsrt .cr_btns div.cv_nav_item.active{z-index:+3;}
+#cr_cv_nav .info, #cr_cv_sel_oplsrt .info{display:none;}
+#cr_cv_nav .cv_nav_item, #cr_cv_sel_oplsrt .cv_nav_item{box-sizing:border-box;border-top:1px solid #ffffff;}
+#cr_cv_nav .infoitem{z-index:+1;opacity:1;}
+#cr_cv_sel_oplsrt .infoitem{z-index:+1;opacity:1;}
+#cr_cv_nav .btn_down, #cr_cv_sel_oplsrt .btn_down{padding:10px;float:right;position:absolute;right:0px;top:0px;cursor:pointer;border-top:1px solid #ffffff;opacity:0.5;height:36px;width:36px;line-height:16px;}
+#cr_cv_sel_oplsrt .btn_down{z-index:+1;}
+#cr_cv_nav .btn_down:hover, #cr_cv_sel_oplsrt .btn_down:hover{opacity:0.7;}
+/*----------------------------------------------------------*/
+/*                  BUTTONS .                               */
+/*----------------------------------------------------------*/
+/*.cv_btn_inschrijven, .cv_btn_data a, .cv_btn_qr, .create_qr{padding:6px 12px;line-height:24px;display:inline-block;text-transform:capitalize;}*/
+/*.cv_btn_inschrijven span, .cv_btn_data a span, .cv_btn_qr span, .create_qr span{display:inline-block;line-height:24px;}*/
+/*.cv_btn_inschrijven img, .cv_btn_data a img, .cv_btn_qr img, .create_qr img{display:none;}*/
+.cv_btn_inschrijven{padding:6px 3px;line-height:24px;display:inline-block;text-transform:capitalize;border-radius:6px;width:90px;text-decoration:none;}
+.cv_btn_inschrijven span{display:block;line-height:24px;text-align:center;}
+.cv_btn_inschrijven img{display:none;}
+#btn_wis_handtekening{padding:6px 8px;line-height:12px;display:inline-block;text-transform:capitalize;font-size:0.75em;cursor:pointer;}
+.cv_btn_inschrijven:hover{background:#6997bf;color:white;}
+.btn span{cursor:pointer;}
+/*----------------------------------*/
+/*				TEXT      			*/
+/*----------------------------------*/
+h1{font-family: 'Raleway', sans-serif; font-weight:700;}
+h1{font-size:2em;line-height:1.125;text-transform:uppercase;margin-top:0px;margin-bottom:0.6em;}
+.bg h1{font-size:1.625em;}
+h1 a{text-decoration:none;}
+h2{font-family: 'Raleway', sans-serif;font-size:1.325em;line-height:1.15;text-transform:uppercase;margin-top:0px;margin-bottom:0.6em;}
+h2.style1{text-transform:none;font-weight:700;}
+h3{font-family: 'Raleway', sans-serif;font-size:1.25em;line-height:1.14;margin-top:0px;margin-bottom:0.6em;font-weight:700;}
+h4{font-family: 'Raleway', sans-serif;font-size:1em;line-height:1.111;text-transform:uppercase;font-weight:700;margin-top:0px;margin-bottom:0.6em;}
+p{display:block;margin-bottom:1em;}
+p, a{font-size:1em;line-height:1.375;font-weight:400;}
+a, .list_inline li{font-weight:400;}
+.list li, .list p, .list a{font-weight:400;}
+p.big{font-size:1.125em;}
+p.info{font-style:italic;line-height:1.25;font-size:0.875em;}
+p strong{font-weight:700;}
+p.last{margin-bottom:0px;}
+.underline{text-decoration:underline;}
+
+
+/*----------------------------------*/
+/*				MEDIA QUERIES		*/
+/*----------------------------------*/
+@media all and (max-width: 767px) {
+	#cr_cntnt{padding:0 24px;}
+	#cr_cntnt .cntnt{padding:0px;}
+	#cr_btns_search{margin-bottom:24px;}
+	.cr_list_details > div > label{display:block;width:100%;}
+	.cr_list_details > div > span{display:block;width:100%;}
+	#cr_cv_onderdelenlist table{position:relative;width:100%;}
+	#cr_cv_onderdelenlist table th:nth-child(1){display:block;text-align:left;}
+	#cr_cv_onderdelenlist table th:nth-child(2), #cr_cv_onderdelenlist table th:nth-child(3), #cr_cv_onderdelenlist table th:nth-child(4), #cr_cv_onderdelenlist table th:nth-child(5){display:none;}
+	#cr_cv_onderdelenlist table tr td, #cr_cv_onderdelenlist table tr td:first-child{display:block;width:100%;text-align:left;border-bottom-width:0px;padding:0px 12px;}
+	#cr_cv_onderdelenlist table tr td:first-child{font-weight:bold;padding:12px;}
+	#cr_cv_onderdelenlist table tr td:last-child{margin-bottom:12px;}
+	#cr_cv_onderdelenlist table tr{border-bottom:1px solid #eee;}
+	#cr_cv_onderdelenlist table td:nth-of-type(2)::before{content:'Datum: '; display:inline-block;margin-right:6px;}
+	#cr_cv_onderdelenlist table td:nth-of-type(3)::before{content:'Startuur: '; display:inline-block;margin-right:6px;}
+	#cr_cv_onderdelenlist table td:nth-of-type(4)::before{content:'Einduur: '; display:inline-block;margin-right:6px;}
+	#cr_cv_onderdelenlist table td:nth-of-type(5)::before{content:'Locatie: '; display:inline-block;margin-right:6px;}
+	#cr_listonderdelen .ta_right{text-align:left;margin-bottom:24px;}
+}
+@media all and (min-width: 480px) and (max-width: 767px){
+	#cr_nav_top_blinc nav ul li a{font-size:0.75em;}
+}
+@media all and (min-width: 768px) and (max-width: 959px) {
+	.l{float:left;width:32%;}
+	.r{float:right;width:68%;}
+	#cr_cntnt{padding:0px 24px;}
+	#cr_oplsoortbtns{margin:12px 0px;width:100%;}
+	#cr_cntnt .cntnt{padding:48px 0px 48px 0px;}
+	#cr_btns_search, #cr_inschrijving_left{padding:48px 12px;}
+	#cr_search{margin:0px 0px 6px 0px;}
+	#cr_nav_top nav ul{width:480px;margin:0 auto;}
+	/*#cr_form{width:480px;margin:48px auto 0 auto;}*/
+	footer .l{text-align:left;}
+	footer .r{text-align:right;}
+	#container{margin:0 0 -160px 0;}
+	#push, footer{height:160px;}
+	#cr_nav_top_blinc nav ul li a{font-size:0.75em;}
+	.cr_list_details > div > label{width:140px;}
+	.cr_list_details > div > span{width:calc( 100% - 164px );}
+	/*#cr_cv_kalenderlist table{font-size:0.75em;width:100%;}
+	#cr_cv_kalenderlist table th{display:table-cell;}
+	#cr_cv_kalenderlist table th:first-of-type{display:table-cell;width:auto;}
+	#cr_cv_kalenderlist table th, #cr_cv_kalenderlist table td, #cr_cv_onderdelenlist table th, #cr_cv_onderdelenlist table td{display:table-cell;}
+	#cr_cv_kalenderlist table td.td_start::before, #cr_cv_kalenderlist table td.td_starteinde::before, #cr_cv_kalenderlist table td.td_einde::before, #cr_cv_kalenderlist table td.td_locatie::before, #cr_cv_kalenderlist table td.td_code::before, #cr_cv_kalenderlist table td.td_datum::before{display:none;}
+	#cr_cv_kalenderlist table td:nth-of-type(2),
+	#cr_cv_kalenderlist table td:nth-of-type(3),
+	#cr_cv_kalenderlist table td:nth-of-type(5),
+	#cr_cv_kalenderlist table td:nth-of-type(4){
+		width:60px;
+		overflow:hidden;
+	}*/
+}
+@media all and (min-width: 960px) and (max-width: 1199px) {
+	.l, .cv_l{float:left;width:24%;}
+	.r, .cv_r{float:right;width:76%;}
+	.cv_l{padding-top:6px;}
+	.cv_r{text-align:right;position:relative;}
+	#cr_cntnt{padding:0px 24px;}
+	#cr_search{margin:0px 0px 6px 0px;}
+	#cr_pages{text-align:right;}
+	#cr_pages ul{float:right;}
+	#cr_oplsoortbtns{margin:12px 0px;width:100%;}
+	#cr_cntnt .cntnt{padding:48px 0px;}
+	#cr_btns_search, #cr_inschrijving_left{padding:48px 12px;}
+	#cr_cv_form{padding:48px 0px;}
+	#cr_nav_top nav ul{width:600px;margin:0 auto;}
+	/*#cr_form{width:448px;margin:48px 0px 0 auto;box-sizing:border-box;}
+	#cr_form.cntnt{padding:0px 24px;}*/
+	#cr_cv_kalenderlist table{font-size:0.875em;}
+	#cr_cv_kalenderlist table th, #cr_cv_kalenderlist table td, #cr_cv_onderdelenlist table th, #cr_cv_onderdelenlist table td{display:table-cell;}
+	#cr_cv_kalenderlist table td{width:auto;padding:0 12px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px;border-top-width:0px;border-style:solid;}
+	#cr_cv_kalenderlist table tr.data>td{border-bottom-width:0px;}
+	#cr_cv_kalenderlist table td.td_start::before, #cr_cv_kalenderlist table td.td_starteinde::before, #cr_cv_kalenderlist table td.td_einde::before, #cr_cv_kalenderlist table td.td_locatie::before, #cr_cv_kalenderlist table td.td_code::before, #cr_cv_kalenderlist table td.td_datum::before, #cr_cv_kalenderlist table td:nth-child(3)::before, #cr_cv_kalenderlist table table td:nth-child(3)::before, #cr_cv_kalenderlist table table td:nth-child(4)::before, #cr_cv_kalenderlist table tr td:nth-child(2)::before, #cr_cv_kalenderlist table tr td:nth-child(3)::before, #cr_cv_kalenderlist table tr td:nth-child(4)::before, #cr_cv_kalenderlist table tr td:nth-child(5)::before, #cr_cv_kalenderlist table tr td:nth-child(4) span:nth-of-type(1)::before, #cr_cv_kalenderlist table tr td:nth-child(4) span:nth-of-type(2)::before{display:none;}
+	#cr_cv_kalenderlist table tr div.inhoud .ttl{border-bottom-width:0px;margin:0px 0 12px 0;}
+	#cr_cv_kalenderlist table table th.w_small{width:120px;}
+	#cr_cv_kalenderlist table table td:nth-of-type(1){padding-left:12px;}
+	/*#cr_cv_kalenderlist table table td:nth-of-type(2), #cr_cv_kalenderlist table table td:nth-of-type(3), #cr_cv_kalenderlist table table td:nth-of-type(4), #cr_cv_kalenderlist table td.last{text-align:center;}*/
+	#cr_cv_kalenderlist table tr div.inhoud .ttl{border-bottom-width:0px;margin:0px 0 12px 0;}
+	#cr_cv_kalenderlist table table th.w_small{width:120px;}
+	#cr_cv_kalenderlist table table td:nth-of-type(1){padding-left:12px;}
+	#cr_cv_kalenderlist table table td:nth-of-type(2), 
+	#cr_cv_kalenderlist table table td:nth-of-type(3), 
+	#cr_cv_kalenderlist table table td:nth-of-type(4), 
+	#cr_cv_kalenderlist table td.last, 
+	#cr_cv_kalenderlist table td:nth-of-type(2), 
+	#cr_cv_kalenderlist table td:nth-of-type(2) > div, 
+	#cr_cv_kalenderlist table td:nth-of-type(3), 
+	#cr_cv_kalenderlist table td:nth-of-type(4), 
+	#cr_cv_kalenderlist table td:nth-of-type(5), 
+	#cr_cv_kalenderlist table td.td_start, 
+	#cr_cv_kalenderlist table td.td_eind, 
+	#cr_cv_kalenderlist table td.td_starteinde, 
+	#cr_cv_kalenderlist table td.td_locatie, 
+	#cr_cv_kalenderlist table td.td_code, 
+	#cr_cv_kalenderlist table td.td_datum, 
+	#cr_cv_kalenderlist table td.td_button{text-align:center;}
+	#cr_cv_kalenderlist table td:nth-of-type(2)>div,
+	#cr_cv_kalenderlist table td:nth-of-type(3)>div,
+	#cr_cv_kalenderlist table td:nth-of-type(4)>div{
+		width:70px;
+	}
+	#cr_cv_kalenderlist table td:nth-of-type(5)>div{
+		width:auto;
+	}
+	.cr_list_details > div > label{width:140px;}
+	.cr_list_details > div > span{width:calc( 100% - 164px );}
+	/*#cr_cv_kalenderlist table td.cv_btn_data{padding:0px 12px;}*/
+	footer .l{text-align:left;}
+	footer .r{text-align:right;}
+	#container{margin:0 0 -160px 0;}
+	#push, footer{height:160px;}
+	#cr_qrcode .btn_close{height:24px;background-size:24px 24px;padding-right:30px;}
+	/*.cv_btn_data a, .cv_btn_qr, a.create_qr{margin-bottom:0px;}*/
+	#cr_nav_top_blinc nav ul li a{font-size:0.75em;}
+	.cv_btn_inschrijven{padding:6px 12px;}
+}
+@media all and (min-width:1200px){
+	.l, .cv_l{float:left;width:22%;}
+	.r, .cv_r{float:right;width:78%;}
+	.cv_l{padding-top:6px;}
+	.cv_r{text-align:right;position:relative;}
+	/*#cr_search{margin:0px;}*/
+	#cr_cntnt{padding:0px;}
+	#cr_pages{text-align:right;}
+	#cr_pages ul{float:right;}
+	#cr_oplsoortbtns{margin:12px 0px;width:100%;}
+	#cr_cntnt .cntnt,#cr_btns_search, #cr_inschrijving_left{padding:24px;}
+	#cr_cv_form{padding:24px 0px;width:640px;}
+	#cr_nav_top nav ul{width:600px;margin:0 auto;}
+	/*#cr_form{width:600px;margin:48px auto 0 auto;}*/
+	#cr_cv_kalenderlist table th, #cr_cv_kalenderlist table td{display:table-cell;}
+	#cr_cv_kalenderlist table td{width:auto;padding:0 12px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px;border-top-width:0px;border-style:solid;}
+	#cr_cv_kalenderlist table tr.data>td{border-bottom-width:0px;}
+	#cr_cv_kalenderlist table td.td_start::before, #cr_cv_kalenderlist table td.td_starteinde::before, #cr_cv_kalenderlist table td.td_einde::before, #cr_cv_kalenderlist table td.td_locatie::before, #cr_cv_kalenderlist table td.td_code::before, #cr_cv_kalenderlist table td.td_datum::before, #cr_cv_kalenderlist table td:nth-child(3)::before, #cr_cv_kalenderlist table table td:nth-child(3)::before, #cr_cv_kalenderlist table table td:nth-child(4)::before, #cr_cv_kalenderlist table tr td:nth-child(2)::before, #cr_cv_kalenderlist table tr td:nth-child(3)::before, #cr_cv_kalenderlist table tr td:nth-child(4)::before, #cr_cv_kalenderlist table tr td:nth-child(5)::before, #cr_cv_kalenderlist table tr td:nth-child(4) span:nth-of-type(1)::before, #cr_cv_kalenderlist table tr td:nth-child(4) span:nth-of-type(2)::before{display:none;}
+	/*#cr_cv_kalenderlist table td:nth-child(3)::before, #cr_cv_kalenderlist table table td:nth-child(3)::before, #cr_cv_kalenderlist table table td:nth-child(4)::before{display:none;}*/
+	#cr_cv_kalenderlist table tr div.inhoud .ttl{border-bottom-width:0px;margin:0px 0 12px 0;}
+	#cr_cv_kalenderlist table table th.w_small{width:120px;}
+	#cr_cv_kalenderlist table table td:nth-of-type(1){padding-left:12px;}
+	#cr_cv_kalenderlist table table td:nth-of-type(2),  
+	#cr_cv_kalenderlist table table td:nth-of-type(3), 
+	#cr_cv_kalenderlist table table td:nth-of-type(4), 
+	#cr_cv_kalenderlist table td.last, 
+	#cr_cv_kalenderlist table td:nth-of-type(2), 
+	#cr_cv_kalenderlist table td:nth-of-type(2) > div, 
+	#cr_cv_kalenderlist table td:nth-of-type(3), 
+	#cr_cv_kalenderlist table td:nth-of-type(4), 
+	#cr_cv_kalenderlist table td:nth-of-type(5), 
+	#cr_cv_kalenderlist table td.td_start, 
+	#cr_cv_kalenderlist table td.td_eind, 
+	#cr_cv_kalenderlist table td.td_starteinde, 
+	#cr_cv_kalenderlist table td.td_locatie, 
+	#cr_cv_kalenderlist table td.td_code, 
+	#cr_cv_kalenderlist table td.td_datum, 
+	#cr_cv_kalenderlist table td.td_button{text-align:center;}
+	#cr_cv_kalenderlist table td:nth-of-type(2)>div,
+	#cr_cv_kalenderlist table td:nth-of-type(3)>div,
+	#cr_cv_kalenderlist table td:nth-of-type(4)>div{
+		width:80px;
+	}
+	#cr_cv_kalenderlist table td:nth-of-type(5)>div{
+		width:auto;
+	}
+	/*#cr_cv_kalenderlist table td.cv_btn_data{padding:0px 12px;}*/
+	footer .l{text-align:left;}
+	footer .r{text-align:right;}
+	#container{margin:0 0 -160px 0;}
+	#push, footer{height:160px;}
+	#cr_qrcode .btn_close{height:24px;background-size:24px 24px;padding-right:30px;}
+	/*.cv_btn_data a, .cv_btn_qr, a.create_qr{margin-bottom:0px;}*/
+	#cr_nav_top_blinc nav ul li a{font-size:0.75em;}
+	.cv_btn_inschrijven{padding:6px 12px;}
+}
+@media all and (min-width:1600px){
+	
+}
+
+
